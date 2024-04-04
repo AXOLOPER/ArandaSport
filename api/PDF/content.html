@@ -1,0 +1,370 @@
+<body  class="hoja">
+  <!--<mat-grid-list cols="9" rowHeight="5rem"> -->
+  <fieldset class="fhide">
+    <table>
+      <tr>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="3">
+          <div style="display: block;" class="imagen">
+            <img src="https://sic.cultura.gob.mx/images/62936" style="width:70mm;" />
+          </div>
+        </td>
+        <td></td>
+        <td colspan="5" rowspan="5">
+          {{name || "SOLICITUD DE INSCRIPCION"}}
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2" rowspan="5">
+          FOTO
+        </td>
+        <td></td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr>
+        <td colspan="2">
+          FECHA: {{Data.CreatedAt}}
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          Porcentage de Beca:
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="9">Programa de estudios: {{Data.CARRERA.Name || "Carrera de prueba"}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="5">Grado: {{Data.GRADO.Name || "Grado de prueba"}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="4">Grupo: {{Data.GRUPO.Name || "Grupo de prueba"}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="5">Turno: {{Data.TURNO.Name || "Turno de prueba"}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="4">Periodo: {{Data.PERIODO.Name || "Periodo de prueba"}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="5">Plantel: {{Data.PLANTEL.Name || "Plantel de prueba"}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="4">Matricula: {{Data.MATRICULA || "MATRICULA de prueba"}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </fieldset>
+<br/>
+  <fieldset>
+    <legend>DATOS DEL ALUMNO</legend>
+    <table>
+      <tr>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+        <th><span></span></th>
+      </tr>
+      <tr>
+        <td colspan="3">
+          Primer Apellido:<br/>
+          {{Data.CANDIDATO.ApellidoP}}
+        </td>
+        <td></td>
+        <td></td>
+        <td colspan="3">
+          Segundo Apellido:<br />
+          {{Data.CANDIDATO.ApellidoM}}
+        </td>
+        <td></td>
+        <td></td>
+        <td colspan="3">
+          Nombre(s):<br />
+          {{Data.CANDIDATO.Nombres}}
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          Correo electronico:<br/>
+          {{Data.CANDIDATO.Correo}}
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3">
+          CURP:<br/>
+          {{Data.CANDIDATO.CURP}}
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          Sexo:<br/>
+          {{Data.CANDIDATO.Sexo}}
+        </td>
+        <td></td>
+        <td></td>
+        <td colspan="3">
+          Edad:<br>
+          {{Data.Edad}}
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+          Estado civil:<br/>
+          {{Data.CANDIDATO.EstCivil}}
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </fieldset>
+<br />
+<fieldset>
+  <table>
+    <tr>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+    </tr>
+    <tr>
+      <td colspan="5">
+        Lugar de Nacimiento: {{Data.Candidato.LNac}}
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td colspan="4">
+        Fecha de Nacimiento: {{Data.Candidato.FNac}}
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</fieldset>
+<br />
+<fieldset>
+  <legend>DOMICILIO</legend>
+  <table>
+    <tr>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+    </tr>
+    <tr>
+      <td colspan="9">
+        Direccion:{{Data.CANDIDATO.Domicilio}}
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Colonia:<br />
+        {{Data.CANDIDATO.Colonia}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        Municipio:<br />
+        {{Data.CANDIDATO.Municipio}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        Entidad federativa:<br />
+        {{Data.CANDIDATO.Estado}}
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Pais:<br />
+        {{Data.CANDIDATO.Pais}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        Telefono movil:<br />
+        {{Data.CANDIDATO.Cel}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        Telefono fijo:<br />
+        {{Data.CANDIDATO.Tel}}
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</fieldset>
+
+<br />
+<fieldset>
+  <legend>Datos de emergencia</legend>
+  <table>
+    <tr>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+      <th><span></span></th>
+    </tr>
+    <tr>
+      <td colspan="3">
+        Padece alguna Enfermedad:{{Data.CANDIDATO.Padece? "SI":"NO"}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        {{Data.CANDIDATO.Padece? "Cual?":""}}: {{Data.CANDIDATO.Enfermedad}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        Que medicamento tomas?:{{Data.CANDIDATO.Medicamento}}
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        En caso de emergencia avisar a:<br />
+        {{Data.CANDIDATO.EmergenciaNombre}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        Telefono:<br />
+        {{Data.CANDIDATO.EmergenciaTel}}
+      </td>
+      <td></td>
+      <td></td>
+      <td colspan="3">
+        Parentesco:<br />
+        {{Data.CANDIDATO.EmergenciaParentesco}}
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</fieldset>
+
+<br />
+<fieldset class="fhide">
+  <table>
+    <tr>
+      <td colspan="9" class="justify">
+            Es de mi conocimiento que el tramite de inscripcion se considera completo
+            cuando se entrega la totalidad de los documentos de inscripcion
+            y se realiza el pago correspondiente. Conozco y acepto los reglamentos y
+            lineamientos que establece UNIVER Arandas. <br />
+            Bajo protesta de decir verdad.
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" class="center">_________________________<br>FIRMA DE CAPTURA</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td colspan="4" class="center">_________________________<br>FIRMA DEL SOLICITANTE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</fieldset>
+</body>
