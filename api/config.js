@@ -3,9 +3,10 @@ const dotenv = require('dotenv');
 const path = require('path');
 
 console.log("ENV: "+process.env.NODE_ENV);
+const PATH = path.resolve(__dirname+'/environments', process.env.NODE_ENV + '.env');
 
 dotenv.config({
-  path: path.resolve(__dirname+'/environments', process.env.NODE_ENV + '.env')
+  path: PATH
 });
 
 module.exports = {
@@ -14,5 +15,5 @@ module.exports = {
     APIHOST: process.env.APIHOST || '127.0.0.1',
     PORT: process.env.PORT || 5000,
     API: process.env.API || '',
-    DBLINK:"mongodb://127.0.0.1:27017/URADB?authSource=admin"
+    DBLINK:"mongodb://127.0.0.1:27017/ArandaSport?authSource=admin"
 }

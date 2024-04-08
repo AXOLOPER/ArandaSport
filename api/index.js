@@ -100,7 +100,7 @@ var allowCrossDomain = function(req, res, next) {
   next();
 }
 
-const MONGO = DBLINK||"mongodb://127.0.0.1:27017/URADB?authSource=admin";
+const MONGO = DBLINK||"mongodb://127.0.0.1:27017/TEST?authSource=admin";
 
 console.log(MONGO);
 console.log('api: '+api);
